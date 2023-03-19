@@ -1,0 +1,32 @@
+﻿[
+  {
+    "id": "1",
+    "name": "Noir",
+    "type": "Dog",
+    "breed": "Schnoodle"
+  },
+  {
+    "id": "2",
+    "name": "Bree",
+    "type": "Dog",
+    "breed": "Mutt"
+  },
+  {
+    "id": "3",
+    "name": "Gigi",
+    "type": "Dog",
+    "breed": "Retriever"
+  },
+  {
+    "id": "4",
+    "name": "Gretyl",
+    "type": "Dog",
+    "breed": "Shepherd"
+  },
+  {
+    "id": "5",
+    "name": "Cleo",
+    "type": "Cat",
+    "breed": "Alley"
+  }
+]

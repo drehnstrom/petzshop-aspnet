@@ -25,6 +25,12 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="/swagger">OpenAPI Spec</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -38,7 +44,19 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - petzshop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div about="http://example.org/doug/" xmlns:cc="http://creativecommons.org/ns#">
+                This page, by
+                <a property="cc:attributionName" rel="cc:attributionURL"
+                   href="http://example.org/">
+                    Doug
+                </a>,
+                is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
+                    Creative Commons Attribution License
+                </a>.
+
+                &copy; 2023 - petzshop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

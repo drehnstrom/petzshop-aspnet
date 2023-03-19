@@ -1,9 +1,244 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Petz";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Petz Shop Data</h1>
 </div>
+
+<div id="dataset-description">
+    <h2>Dataset description</h2>
+    <table class="human-readable-example" summary="This table has the dataset description. The first column has the keywords and the seconde has the values.">
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td property="dct:title">Petz Shop Data</td>
+            </tr>
+            <tr>
+                <td>URI</td>
+                <td>https://petzshop.azurewebsites.net/pets</td>
+            </tr>
+            <tr>
+                <td>Keywords</td>
+                <td><span property="dcat:keyword">Pets</span>, <span property="dcat:keyword">Dogs</span>, <span property="dcat:keyword">Cats</span></td>
+            </tr>
+        </tbody>
+        <tbody id="provenance-info">
+            <tr>
+                <td>Publication date</td>
+                <td><span property="dct:issued" content="2023-03-31" datatype="xsd:date">2023-03-31</span></td>
+            </tr>
+            <tr>
+                <td id="publisher">Publisher</td>
+                <td property="dct:publisher" resource="#publisher" typeof="foaf:Organization prov:Agent"><span property="foaf:name">ROI Training</span></td>
+            </tr>
+            <tr>
+                <td>Creator</td>
+                <td property="dct:creator" typeof="foaf:Person"><span property="foaf:name">Doug</span> &lt;<a href="mailto:doug@roitraining.com" property="foaf:mail">doug@roitraining.com</a>&gt;<span property="prov:onBehalfOf" resource="#publisher"></span></td>
+            </tr>
+        </tbody>
+        <tbody>
+            <tr>
+                <td>Contact point</td>
+                <td><a property="dcat:contactPoint" href="/Home/Contact">https://petzshop.azurewebsites.net/Home/Contact</a></td>
+            </tr>
+            <tr>
+                <td>Period that the dataset covers</td>
+                <td>
+                    <a property="dct:temporal" href="http://reference.data.gov.uk/id/year/2023">
+                        The
+                        British calendar year of 2023
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Spatial coverage</td>
+                <td>
+                    <a property="dct:spatial" href="http://www.geonames.org/3399415">
+                        USA
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Update frequency</td>
+                <td><a property="dct:accrualPeriodicity" href="http://purl.org/linked-data/sdmx/2009/code#freq-A">Annual</a></td>
+            </tr>
+            <tr>
+                <td>Theme</td>
+                <td>Mobility</td>
+            </tr>
+            <tr id="locale-parameters">
+                <td>Language</td>
+                <td>English</td>
+            </tr>
+            <tr>
+                <td>Date and time formats</td>
+                <td>ISO 8601</td>
+            </tr>
+            <tr>
+                <td>Current version</td>
+                <td>1.0</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div id="dataset-distributions">
+    <h2>Dataset distributions</h2>
+
+    <h3 property="dcat:distribution" resource="#timetable-001-RDF">RDF Distribution</h3>
+    <table resource="#timetable-001-RDF" typeof="dcat:Distribution" class="human-readable-example" summary="This table describes the RDF distribution of the dataset. The first column has the keywords and the seconde has the values.">
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td property="dct:title">RDF Pets</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td property="dct:description">RDF distribution of the Pets data.</td>
+            </tr>
+            <tr>
+                <td>Media type</td>
+                <td property="dcat:mediaType">application/rdf</td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td>
+                    <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+                        CC
+                        BY-SA 3.0
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Publication date</td>
+                <td><span property="dct:issued" content="2023-03-31" datatype="xsd:date">2023-03-31</span></td>
+            </tr>
+            <tr>
+                <td>Download URL</td>
+                <td>
+                    <a property="dcat:downloadURL" href="/data/pets.txt">https://petzshop.azurewebsites.net/data/pets.txt</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 id="timetable-001-CSV" property="dcat:distribution" resource="#timetable-001-CSV"> CSV Distribution </h3>
+    <table about="#timetable-001-CSV" typeof="dcat:Distribution" class="human-readable-example" summary="This table describes the CSV distribution of the dataset. The first column has the keywords and the seconde has the values.">
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td property="dct:title">CSV Pets</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td property="dct:description">CSV distribution of Pets dataset.</td>
+            </tr>
+            <tr>
+                <td>Media type</td>
+                <td property="dcat:mediaType">text/csv</td>
+            </tr>
+            <tr id="license-info">
+                <td>License</td>
+                <td>
+                    <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+                        CC
+                        BY-SA 3.0
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Publication date</td>
+                <td><span property="dct:issued" content="2023-03-31" datatype="xsd:date">2023-03-31</span></td>
+            </tr>
+
+            <tr>
+                <td>Download URL</td>
+                <td>
+                    <a property="dcat:downloadURL" href="/data/pets.csv">https://petzshop.azurewebsites.net/data/pets.csv</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 id="timetable-001-CSV" property="dcat:distribution" resource="#timetable-001-CSV"> JSON Distribution </h3>
+    <table about="#timetable-001-CSV" typeof="dcat:Distribution" class="human-readable-example" summary="This table describes the JSON distribution of the dataset. The first column has the keywords and the seconde has the values.">
+        <tbody>
+            <tr>
+                <td>Title</td>
+                <td property="dct:title">JSON Pets</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td property="dct:description">JSON distribution of Pets dataset.</td>
+            </tr>
+            <tr>
+                <td>Media type</td>
+                <td property="dcat:mediaType">application/json</td>
+            </tr>
+            <tr id="license-info">
+                <td>License</td>
+                <td>
+                    <a href="http://creativecommons.org/licenses/by-sa/3.0/">
+                        CC
+                        BY-SA 3.0
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td>Publication date</td>
+                <td><span property="dct:issued" content="2023-03-31" datatype="xsd:date">2023-03-31</span></td>
+            </tr>
+
+            <tr>
+                <td>Download URL</td>
+                <td>
+                    <a property="dcat:downloadURL" href="/data/pets.json">https://petzshop.azurewebsites.net/data/pets.json</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div id="dqv-info">
+        <h4>Data Quality - CSV Distribution</h4>
+
+        <table class="human-readable-example" summary="This table describes the Data Quality fields of the CSV distribution.">
+            <tbody>
+                <tr about="#completeness" typeof="dqv:Dimension" property="dqv:inCategory" resource="#intrinsicDimensions">
+                    <td><strong><span property="skos:prefLabel">Completeness</span></strong></td>
+                    <td property="skos:definition">Refers to the degree to which all required information is present in a particular dataset.</td>
+                </tr>
+                <tr about="#csvCompletenessMetric" typeof="dqv:Metric" property="dqv:inDimension" resource="#completeness">
+                    <td>Metric</td>
+                    <td property="skos:definition">Ratio between the number of objects represented in the cvs and the  number of  objects expected to be represented according to the declared dataset scope.</td>
+                </tr>
+                <tr about="#measure2" typeof="dqv:QualityMeasurement" property="dqv:isMeasurementOf" resource="#csvCompletenessMetric">
+                    <td>Value</td>
+                    <td>
+                        <span about="#measure2" property="dqv:computedOn" resource="#timetable-001-CSV"></span>
+                        <span property="dqv:value" datatype="xsd:double">0.5</span> (Double)
+                    </td>
+                </tr>
+                <tr about="#availability" typeof="dqv:Dimension" property="dqv:inCategory" resource="#accessibility">
+                    <td><strong><span property="skos:prefLabel">Availability</span></strong></td>
+                    <td property="skos:definition">Refers to the extent to which data (or some portion of it) is present, obtainable and ready for use.</td>
+                </tr>
+                <tr about="#downloadURLAvailabilityMetric" typeof="dqv:Metric" property="dqv:inDimension" resource="#availability">
+                    <td>Metric</td>
+                    <td property="skos:definition">dcat:downloadURL is available and its value is dereferenceable.</td>
+                </tr>
+                <tr about="#measure1" typeof="dqv:QualityMeasurement" property="dqv:isMeasurementOf" resource="#downloadURLAvailabilityMetric">
+                    <td>Value</td>
+                    <td>
+                        <span about="#measure1" property="dqv:computedOn" resource="#timetable-001-CSV"></span>
+                        <span property="dqv:value" datatype="xsd:boolean">true</span>(Boolean)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
 

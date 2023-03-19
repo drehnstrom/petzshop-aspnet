@@ -1,0 +1,24 @@
+﻿
+@prefix pet: <http://petzshop.com/pet#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+pet:1 rdf:type pet:Dog ;
+     pet:name "Noir" ;
+     pet:breed "Schnoodle" .
+
+pet:2 rdf:type pet:Dog ;
+     pet:name "Bree" ;
+     pet:breed "Mutt" .
+
+pet:3 rdf:type pet:Dog ;
+     pet:name "Gigi" ;
+     pet:breed "Retriever" .
+
+pet:4 rdf:type pet:Dog ;
+     pet:name "Gretyl" ;
+     pet:breed "Shepherd" .
+
+pet:5 rdf:type pet:Cat ;
+     pet:name "Cleo" ;
+     pet:breed "Alley" .
