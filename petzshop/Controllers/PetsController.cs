@@ -21,6 +21,18 @@ namespace petzshop.Controllers
         public PetsController(PetContext context)
         {
             _context = context;
+
+
+            if (_context.Pets.Count() == 0)
+            {
+                _context.Pets.Add(new Pet { Id = 1, Name = "Noir", Type = "Dog", Breed = "Schnoodle" });
+                _context.Pets.Add(new Pet { Id = 2, Name = "Bree", Type = "Dog", Breed = "Mutt" });
+                _context.Pets.Add(new Pet { Id = 3, Name = "Gigi", Type = "Dog", Breed = "Retriever" });
+                _context.Pets.Add(new Pet { Id = 4, Name = "Gretyl", Type = "Dog", Breed = "Shepherd" });
+                _context.Pets.Add(new Pet { Id = 5, Name = "Cleo", Type = "Cat", Breed = "Alley" });
+            }
+            _context.SaveChangesAsync();
+
         }
 
         // GET: api/TodoItems
