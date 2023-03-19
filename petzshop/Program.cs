@@ -11,6 +11,9 @@ builder.Services.AddDbContext<PetContext>(opt =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllers()
+    .AddXmlSerializerFormatters();
+
 
 var app = builder.Build();
 
